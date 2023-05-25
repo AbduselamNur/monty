@@ -10,6 +10,11 @@ void f_func(char *opcode, char *val, int ln, int form)
 		{"pint", _pint},
 		{"pop", _pop},
 		{"swap", _swap},
+		{"nop", _nop},
+		{"add", _add},
+		{"mul", _mul},
+		{"div", _div},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
