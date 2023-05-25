@@ -7,6 +7,7 @@ void f_func(char *opcode, char *val, int ln, int form)
 	instruction_t flist[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 
