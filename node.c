@@ -1,47 +1,47 @@
 #include "monty.h"
 
-void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
+void add_queue(stack_t **node, __attribute__((unused))unsigned int ln)
 {
-	stack_t *tmp;
+	stack_t *new;
 
-	if (new_node == NULL || *new_node == NULL)
+	if (node == NULL || *node == NULL)
 		exit(EXIT_FAILURE);
 	if (head == NULL)
 	{
-		head = *new_node;
+		head = *node;
 		return;
 	}
-	tmp = head;
-	while (tmp->next != NULL)
-		tmp = tmp->next;
+	new = head;
+	while (new->next != NULL)
+		new = new->next;
 
-	tmp->next = *new_node;
-	(*new_node)->prev = tmp;
+	new->next = *node;
+	(*node)->prev = new;
 
 }
 stack_t *create_node(int n)
 {
-	stack_t *node;
+	stack_t *new;
 
-	node = malloc(sizeof(stack_t));
-	if (node == NULL)
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
 		err(4);
-	node->next = NULL;
-	node->prev = NULL;
-	node->n = n;
-	return (node);
+	new->next = NULL;
+	new->prev = NULL;
+	new->n = n;
+	return (new);
 }
-void free_nodes(void)
+void _free(void)
 {
-	stack_t *tmp;
+	stack_t *new;
 
 	if (head == NULL)
 		return;
 
 	while (head != NULL)
 	{
-		tmp = head;
+		new = head;
 		head = head->next;
-		free(tmp);
+		free(new);
 	}
 }

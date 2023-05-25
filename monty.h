@@ -45,21 +45,23 @@ typedef void (*op_func)(stack_t **, unsigned int);
 /*USES FUNC PROTOCOLE*/
 
 void err(int error_code, ...);
-void more_err(int error_code, ...);
 void string_err(int error_code, ...);
+void more_err(int error_code, ...);
 
 stack_t *create_node(int n);
-void free_nodes(void);
-void print_stack(stack_t **, unsigned int);
-void add_to_stack(stack_t **, unsigned int);
-void add_to_queue(stack_t **, unsigned int);
+void _free(void);
+void add_queue(stack_t **, unsigned int);
 
-void call_fun(op_func, char *, char *, int, int);
+void c_fun(op_func, char *, char *, int, int);
 
-void open_file(char *file_name);
-int parse_line(char *buffer, int line_number, int format);
-void read_file(FILE *);
+void openFile(char *name);
 int len_chars(FILE *);
-void find_func(char *, char *, int, int);
+void f_func(char *, char *, int, int);
+int p_line(char *, int, int);
+void readFile(FILE *name);
+
+/*MONTY COMMAND */
+void _pall(stack_t **, unsigned int);
+void _push(stack_t **, unsigned int);
 
 #endif

@@ -8,8 +8,8 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	open_file(argv[1]);
-	free_nodes();
+	openFile(argv[1]);
+	_free();
 	return (0);
 }
 

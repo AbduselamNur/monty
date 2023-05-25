@@ -1,16 +1,16 @@
 #include "monty.h"
-void print_stack(stack_t **stack, unsigned int line_number)
+void _pall(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp;
+	stack_t *new;
 
 	(void) line_number;
 	if (stack == NULL)
 		exit(EXIT_FAILURE);
-	tmp = *stack;
-	while (tmp != NULL)
+	new = *stack;
+	while (new != NULL)
 	{
-		printf("%d\n", tmp->n);
-		tmp = tmp->next;
+		printf("%d\n", new->n);
+		new = new->next;
 	}
 }
 
