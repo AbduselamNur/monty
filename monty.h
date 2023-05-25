@@ -65,5 +65,6 @@ void _pall(stack_t **, unsigned int);
 void _push(stack_t **, unsigned int);
 void _pint(stack_t **, unsigned int);
 void _pop(stack_t **, unsigned int);
+void _swap(stack_t **, unsigned int);
 
 #endif
