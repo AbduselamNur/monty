@@ -63,5 +63,6 @@ void readFile(FILE *name);
 /*MONTY COMMAND */
 void _pall(stack_t **, unsigned int);
 void _push(stack_t **, unsigned int);
+void _pint(stack_t **, unsigned int);
 
 #endif
